@@ -1,0 +1,75 @@
+/* styles.css */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+  }
+  .dark-mode .certifications {
+    background: var(--bg-color); /* You can adjust this if you'd like a different background color in dark mode */
+}
+  
+  .certifications {
+    padding: 100px 20px 20px; /* Add 100px padding at the top to account for navbar */
+    text-align: center;
+  }
+  
+  .certifications h1 {
+    font-size: 2rem;
+    color: --text-color;
+    margin-bottom: 20px;
+  }
+  
+  .certifications-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    grid-template-rows: repeat(2, 1fr);  /* 2 rows */
+    gap: 20px; /* Space between blocks */
+    width: 100%;
+    height: calc(100vh - 160px); /* Adjust height for navbar and heading */
+  }
+  
+  .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #6a11cb, #2575fc); /* Gradient background */
+    border-radius: 15px; /* Rounded corners */
+    color: white;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 20px;
+  }
+  
+  .card:hover {
+    transform: translateY(-10px); /* Hover effect: raise card */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Deeper shadow */
+  }
+  
+  .card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .card p {
+    font-size: 1rem;
+  }
+  
+  @media (max-width: 768px) {
+    .certifications-grid {
+      grid-template-columns: repeat(2, 1fr); /* 2 columns for smaller screens */
+      grid-template-rows: repeat(3, 1fr);  /* 3 rows */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .certifications-grid {
+      grid-template-columns: 1fr; /* 1 column for very small screens */
+      grid-template-rows: repeat(6, 1fr); /* 6 rows */
+    }
+  }
+  
